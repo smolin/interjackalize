@@ -203,6 +203,19 @@ class replaceMapClass:
         return str(random.choice(corpora.switch('adjs')))
     def case_adv(self):
         return str(random.choice(corpora.switch('advs')))
+    def case_noun(self):
+        return str(random.choice(corpora.switch('nouns')))
+    def case_pref(self):
+        return str(random.choice(corpora.switch('prefs')))
+    def case_prep(self):
+        return str(random.choice(corpora.switch('preps')))
+    def case_root(self):
+        return str(random.choice(corpora.switch('roots')))
+    def case_suf(self):
+        return str(random.choice(corpora.switch('sufs')))
+    def case_verb(self):
+        return str(random.choice(corpora.switch('verbs')))
+
     def case_animal(self):
         return str(random.choice(corpora.switch('animals')))
     def case_sport(self):
@@ -213,22 +226,10 @@ class replaceMapClass:
         return str(random.choice(corpora.switch('materials')))
     def case_mood(self):
         return str(random.choice(corpora.switch('moods')))
-    def case_noun(self):
-        return str(random.choice(corpora.switch('nouns')))
     def case_occupation(self):
         return str(random.choice(corpora.switch('occupations')))
-    def case_pref(self):
-        return str(random.choice(corpora.switch('prefs')))
-    def case_prep(self):
-        return str(random.choice(corpora.switch('preps')))
     def case_role(self):
-        return str(random.choice(corpora.switch('roots')))
-    def case_root(self):
         return str(random.choice(corpora.switch('roles')))
-    def case_suf(self):
-        return str(random.choice(corpora.switch('sufs')))
-    def case_verb(self):
-        return str(random.choice(corpora.switch('verbs')))
 
     def case_rm_size(self):
         return random.choice(['tiny','small','medium','large','huge'])
