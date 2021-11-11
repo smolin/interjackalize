@@ -9,6 +9,9 @@ xe ./interjackalize.py {c}
 echo punctuation:
 xe ./interjackalize.py {punctuation}
 
+echo punctuationIOSfirstpage:
+xe ./interjackalize.py {punctuationIOSfirstpage}
+
 echo digit 0-9:
 xe ./interjackalize.py {d}
 
@@ -38,7 +41,14 @@ xe ./interjackalize.py '{rm}'
 
 echo multiple with spaces:
 echo "  % ./interjackalize.py '{2 animal}'"
-echo "    > $(./interjackalize.py '{2 animal}')"
+echo "      > $(./interjackalize.py '{2 animal}')"
 
 echo multiple without spaces:
 xe ./interjackalize.py '{2animal}'
+
+echo combination:
+echo "  % ./interjackalize.py '{2 adv} {adj} {animal}'"
+echo "      > $(./interjackalize.py '{2 adv} {adj} {animal}')"
+
+echo password suitable for iphone entry:
+xe ./interjackalize.py '{pronounceable}{2d}{punctuationIOSfirstpage}{pronounceable}'

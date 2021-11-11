@@ -160,6 +160,8 @@ class replaceMapClass:
         return random.choice(list(set(string.ascii_lowercase) - set('aeiou')))
     def case_punctuation(self):
         return random.choice(list(set(string.punctuation)))
+    def case_punctuationIOSfirstpage(self):
+        return random.choice(['-','/',':',';','(',')','$','&','@','"','.',',','?','!',"'"])
 
     def case_d(self):
         result = random.randrange(10)
