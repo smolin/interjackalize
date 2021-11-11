@@ -1,10 +1,13 @@
-function xe { \echo '    '$*; echo -n '    '; $*; } # "execute with echo"
+function xe { \echo '  % '$*; echo -n '       > '; eval "$*"; } # "execute with echo"
 
 echo pronounceable
 xe ./interjackalize.py {pronounceable}
 
 echo char: c upper lower vowel consonant
 xe ./interjackalize.py {c}
+
+echo punctuation:
+xe ./interjackalize.py {punctuation}
 
 echo digit 0-9:
 xe ./interjackalize.py {d}
@@ -30,13 +33,12 @@ xe ./interjackalize.py {noun}
 echo types: animal sport color material moods occupations role
 xe ./interjackalize.py {animal}
 
-echo 'multiple (opt leave out space):'
-xe ./interjackalize.py {5 animal}
-
 echo a room for an RPG
-xe ./interjackalize.py {rm}}
+xe ./interjackalize.py '{rm}'
 
 echo multiple with spaces:
-echo '    ./interjackalize.py {2 animal}'
-echo -n '    '
-./interjackalize.py '{2 animal}'
+echo "  % ./interjackalize.py '{2 animal}'"
+echo "    > $(./interjackalize.py '{2 animal}')"
+
+echo multiple without spaces:
+xe ./interjackalize.py '{2animal}'

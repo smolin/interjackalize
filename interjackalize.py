@@ -157,8 +157,9 @@ class replaceMapClass:
     def case_vowel(self):
         return random.choice(['a','e','i','o','u','y'])
     def case_consonant(self):
-        # return random.choice(list('bcdfghjklmnpqrstvwxz'))
         return random.choice(list(set(string.ascii_lowercase) - set('aeiou')))
+    def case_punctuation(self):
+        return random.choice(list(set(string.punctuation)))
 
     def case_d(self):
         result = random.randrange(10)
