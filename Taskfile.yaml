@@ -1,0 +1,18 @@
+version: "3"
+tasks:
+  default:
+    desc: contents
+    cmds:
+      - "{{.TASK_EXE}} --list"
+
+  run:
+    desc: primary entrypoint
+    cmds:
+      - python3 interjackalize.py
+
+  bundle:
+    desc: build single-file executable
+    cmds:
+      - ./venv/bin/pip3 install pyinstaller
+      - pyinstaller --onefile interjackalize.py
+      - /bin/cp dist/interjackalize ~/applications/
